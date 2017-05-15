@@ -1,0 +1,10 @@
+#/bin/bash
+
+set -eu
+
+propertiesFile="${1:-client-dev.yml}"
+
+vim $propertiesFile &&\
+git add . &&\
+git commit -m 'Testando...' &&\
+git push
